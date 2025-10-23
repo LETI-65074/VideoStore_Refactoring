@@ -21,7 +21,7 @@ public class Customer
 	{
 		return _name;
 	}
-
+//
 	public String statement()
 	{
 		double totalAmount = 0;
