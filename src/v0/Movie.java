@@ -2,7 +2,7 @@ package v0;
 
 public class Movie {
 
-	public enum Code {REGULAR, CHILDRENS, NEW_RELEASE};
+	public enum Code {REGULAR, CHILDRENS, NEW_RELEASE, BEST_PRICE};
 	
 	private String _title;
 	private Code _priceCode;
