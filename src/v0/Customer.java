@@ -30,13 +30,18 @@ public class Customer {
             frequentRenterPoints += frequentRenterPointsFor(each);
             // linha do recibo
             result += "\t" + each.getMovie().getTitle() + "\t" + thisAmount + "\n";
-            totalAmount += thisAmount;
+            totalAmount = getTotalAmount(totalAmount, thisAmount);
         }
 
         // footer
         result += "Amount owed is " + totalAmount + "\n";
         result += "You earned " + frequentRenterPoints + " frequent renter points";
         return result;
+    }
+
+    private static double getTotalAmount(double totalAmount, double thisAmount) {
+        totalAmount += thisAmount;
+        return totalAmount;
     }
 
     // (opcional mas recomendado) extrair pontos
